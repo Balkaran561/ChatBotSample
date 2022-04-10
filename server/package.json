@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "set GOOGLE_APPLICATION_CREDENTIALS=./config/phongstagram-693e713976eb.json&& nodemon app.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build  --prefix client"
+  },
+  "engine": {
+    "node": "12.16.1",
+    "npm": "6.14.4"
+  },
+  "author": "phong",
+  "license": "ISC",
+  "dependencies": {
+    "actions-on-google": "^2.13.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dialogflow": "^1.2.0",
+    "dialogflow-fulfillment": "^0.6.1",
+    "emoji-picker-react": "^3.2.4",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.3",
+    "nodemailer": "^6.4.13",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "react-device-detect": "^1.14.0",
+    "react-jitsi": "^1.0.4",
+    "simple-peer": "^9.6.2",
+    "socket.io": "^3.0.3",
+    "socket.io-client": "^3.0.1",
+    "socketio-jwt": "^4.6.2"
+  }
+}
